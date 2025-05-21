@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useGetLondonDailyWeather } from "./hooks/LondonDailyWeather";
+import { useGetLondonCurrentWeather } from "./hooks/LondonCurrentWeather";
+import { useGetLosAngelesCurrentWeather } from "./hooks/LosAngelesCurrentWeather";
+import LondonDailyWeatherComp from "./components/LondonDailyWeatherComp";
+import LondonCurrentWeatherComp from "./components/LondonCurrentWeatherComp";
+import LosAngelesCurrentWeatherComp from "./components/LosAngelesCurrentWeatherComp";
 
 function App() {
+  const { londonDailyWeather } = useGetLondonDailyWeather();
+  const { londonCurrentWeather } = useGetLondonCurrentWeather();
+  const { losAngelesCurrentWeather } = useGetLosAngelesCurrentWeather();
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <LondonDailyWeatherComp weather={londonDailyWeather} />
+      <LondonCurrentWeatherComp londonCurrentWeather={londonCurrentWeather} />
+      <LosAngelesCurrentWeatherComp losAngelesCurrentWeather ={losAngelesCurrentWeather} />
     </div>
   );
 }
