@@ -13,9 +13,9 @@ function App() {
 
   return (
     <div>
-      <LondonDailyWeatherComp weather={londonDailyWeather} />
       <LondonCurrentWeatherComp londonCurrentWeather={londonCurrentWeather} />
       <LosAngelesCurrentWeatherComp losAngelesCurrentWeather ={losAngelesCurrentWeather} />
+      <LondonDailyWeatherComp weather={londonDailyWeather} />
     </div>
   );
 }

@@ -10,7 +10,6 @@ export const useGetLondonDailyWeather = () => {
           "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FLondon&forecast_days=16"
         )
         .then(function (response) {
-          //console.log("response data", response.data.daily)
           setLondonWeather(response.data.daily)
         })
         .catch(function (error) {

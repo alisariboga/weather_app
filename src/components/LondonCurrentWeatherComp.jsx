@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function LondonCurrentWeatherComp({ londonCurrentWeather }) {
-    console.log("LondonCurrentWeatherComp : " , londonCurrentWeather)
     if (!londonCurrentWeather || !londonCurrentWeather.time) {
         return <p>Loading current weather…</p>;
     }

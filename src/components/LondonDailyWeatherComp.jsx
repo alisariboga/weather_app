@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function LondonDailyWeatherComp(weatherData) {
-    console.log("Daily Weather Data", weatherData.weather);
     if (!weatherData.weather || !weatherData.weather.time) {
         return <p>Loading</p>;
     }
@@ -45,6 +44,12 @@ export default function LondonDailyWeatherComp(weatherData) {
         );
     }
 
+    // <Button
+    //     onPress={onPressLearnMore}
+    //     title="Learn More"
+    //     color="#841584"
+    //     accessibilityLabel="Learn more about this purple button"
+    // />
 
     return (
         <div>

@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function LosAngelesCurrentWeatherComp({ losAngelesCurrentWeather }) {
-    console.log("losAngelesCurrentWeather : ", losAngelesCurrentWeather)
     if (!losAngelesCurrentWeather || !losAngelesCurrentWeather.time) {
         return <p>Loading current weather…</p>;
     }

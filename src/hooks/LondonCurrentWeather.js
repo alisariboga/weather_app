@@ -10,7 +10,6 @@ export const useGetLondonCurrentWeather = () => {
                     "https://api.open-meteo.com/v1/forecast?latitude=51.4201&longitude=-0.2953&current=temperature_2m&timezone=Europe%2FLondon&forecast_days=16"
                 )
                 .then(function (response) {
-                    console.log("current response data", response.data.current)
                     setLondonCurrentWeather(response.data.current)
                 })
                 .catch(function (error) {
