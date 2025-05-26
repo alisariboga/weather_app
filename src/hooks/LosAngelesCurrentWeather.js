@@ -7,7 +7,7 @@ export const useGetLosAngelesCurrentWeather = () => {
         if (!losAngelesCurrentWeather) {
             axios
                 .get(
-                    "https://api.open-meteo.com/v1/forecast?latitude=41.0138&longitude=28.9497&current=temperature_2m&timezone=America%2FLos_Angeles"
+                    "https://api.open-meteo.com/v1/forecast?latitude=34.05&longitude=118.25&current=temperature_2m&timezone=America%2FLos_Angeles"
                 )
                 .then(function (response) {
                     setLosAngelesCurrentWeather(response.data.current)

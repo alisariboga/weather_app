@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function LondonCurrentWeatherComp({ londonCurrentWeather }) {
+export default function LondonCurrentWeatherComp({ londonCurrentWeather, onClick }) {
     if (!londonCurrentWeather || !londonCurrentWeather.time) {
         return <p>Loading current weather…</p>;
     }
@@ -8,18 +8,16 @@ export default function LondonCurrentWeatherComp({ londonCurrentWeather }) {
     // API’den gelen tek obje
     const { time, temperature_2m: temp } = londonCurrentWeather;
 
-    // sadece saat:dakika almak için
+
     const clockOnly = new Date(time).toLocaleTimeString("en-GB", {
         hour: "2-digit",
         minute: "2-digit",
     });
 
     return (
-        <div>
-            <h3>London</h3>
-            <p>
-                <strong>{temp}°C</strong> 
-            </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <h3 style={{ margin: 0 }}>London</h3>
+            <p>{temp}°C </p>
         </div>
     );
 }

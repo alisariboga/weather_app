@@ -7,7 +7,7 @@ export const useGetLondonCurrentWeather = () => {
         if (!londonCurrentWeather) {
             axios
                 .get(
-                    "https://api.open-meteo.com/v1/forecast?latitude=51.4201&longitude=-0.2953&current=temperature_2m&timezone=Europe%2FLondon&forecast_days=16"
+                    "https://api.open-meteo.com/v1/forecast?latitude=51.50&longitude=-0.12&current=temperature_2m&timezone=Europe%2FLondon&forecast_days=16"
                 )
                 .then(function (response) {
                     setLondonCurrentWeather(response.data.current)
