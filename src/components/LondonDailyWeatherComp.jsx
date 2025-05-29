@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../components/styles/LondonDailyWeatherComp.module.css";
 
 export default function LondonDailyWeatherComp(weatherData) {
     if (!weatherData.weather || !weatherData.weather.time) {
@@ -38,19 +39,16 @@ export default function LondonDailyWeatherComp(weatherData) {
 
 
     return (
-        
         <div>
-            <h3>
-                London Daily Maximum Temperature, Minimum Temperature
-            </h3>
-            <ul>
+            <h3>London Daily Maximum Temperature, Minimum Temperature</h3>
+            <div className={styles.weatherGrid}>
                 {dates.map((date, i) => (
-                    <li key={date}>
-                        {date} – <strong>Max Temp:</strong> {maxTemps[i]} °C –{" "}
+                    <div key={date} className={styles.weatherCard}>
+                        {date} – <strong >Max Temp:</strong> {maxTemps[i]} °C –{" "}
                         <strong>Min Temp:</strong> {minTemps[i]} °C {" "}
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

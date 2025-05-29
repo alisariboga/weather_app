@@ -7,6 +7,10 @@ import LondonDailyWeatherComp from "./components/LondonDailyWeatherComp";
 import LondonCurrentWeatherComp from "./components/LondonCurrentWeatherComp";
 import LosAngelesCurrentWeatherComp from "./components/LosAngelesCurrentWeatherComp";
 import LosAngelesDailyWeatherComp from "./components/LosAngelesDailyWeatherComp";
+import styles from "./App.module.css";
+
+
+
 
 function App() {
   const [showLondon, setShowLondon] = useState(true);
@@ -18,29 +22,32 @@ function App() {
   const { losAngelesDailyWeather } = useGetLosAngelesDailyWeather();
 
 
+
+
   return (
-    <div className="App">
-      <h1 className="App_Name">Weather App</h1>
+    <div className={styles.App}>
+      <h1 className={styles["app-name"]}>Weather App</h1>
 
 
       <LondonCurrentWeatherComp londonCurrentWeather={londonCurrentWeather} />
       <LosAngelesCurrentWeatherComp losAngelesCurrentWeather={losAngelesCurrentWeather} />
 
-      <>
-        <button onClick={() => setShowLondon((prev) => !prev)}>
-          {showLondon ? "Hide London 16 Days Weather!" : "Show London 16 Days Weather!"}
-        </button>
 
-        {showLondon && <LondonDailyWeatherComp weather={londonDailyWeather} />}
-      </>
-      <></>
-      <>
-        <button onClick={() => setShowLosAngeles((prev) => !prev)}>
-          {showLosAngeles ? "Hide LosAngeles 16 Days Weather!" : "Show LosAngeles 16 Days Weather!"}
-        </button>
 
-        {showLosAngeles && <LosAngelesDailyWeatherComp losAngelesWeather ={losAngelesDailyWeather} />}
-      </>
+      <button className={styles["toggle-btn"]} onClick={() => setShowLondon((prev) => !prev)}>
+        {showLondon ? "Hide London 16 Days Weather!" : "Show London 16 Days Weather!"}
+      </button>
+
+      {showLondon && <LondonDailyWeatherComp weather={londonDailyWeather} />}
+
+
+
+      <button className={styles["toggle-btn"]} onClick={() => setShowLosAngeles((prev) => !prev)}>
+        {showLosAngeles ? "Hide LosAngeles 16 Days Weather!" : "Show LosAngeles 16 Days Weather!"}
+      </button>
+
+      {showLosAngeles && <LosAngelesDailyWeatherComp losAngelesWeather={losAngelesDailyWeather} />}
+
     </div>
   );
 }

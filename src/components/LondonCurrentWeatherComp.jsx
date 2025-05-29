@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function LondonCurrentWeatherComp({ londonCurrentWeather, onClick }) {
+
+export default function LondonCurrentWeatherComp({ londonCurrentWeather }) {
     if (!londonCurrentWeather || !londonCurrentWeather.time) {
         return <p>Loading current weather…</p>;
     }
@@ -17,7 +18,9 @@ export default function LondonCurrentWeatherComp({ londonCurrentWeather, onClick
     return (
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <h3 style={{ margin: 0 }}>London</h3>
-            <p>{temp}°C </p>
+            <p>
+                {temp}°C
+            </p>
         </div>
     );
 }

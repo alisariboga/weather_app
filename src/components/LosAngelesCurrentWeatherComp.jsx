@@ -13,10 +13,10 @@ export default function LosAngelesCurrentWeatherComp({ losAngelesCurrentWeather 
     });
 
     return (
-        <div>
-            <h3>Los Angeles</h3>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <h3 style={{ margin: 0 }}>Los Angeles</h3>
             <p>
-                <strong>{temp}°C</strong>
+                {temp}°C
             </p>
         </div>
     );
