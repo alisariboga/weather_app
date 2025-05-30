@@ -22,7 +22,7 @@ export default function LondonDailyWeatherComp(weatherData) {
 
 
     const items = [];
-    for (let i = 0; i < dates.length; i++) { //neresi oldugunu da datayla cek!
+    for (let i = 0; i < dates.length; i++) {
         const date = dates[i];
         const maxTemp = maxTemps[i];
         const minTemp = minTemps[i];
@@ -41,15 +41,19 @@ export default function LondonDailyWeatherComp(weatherData) {
     return (
         <div>
             <h3>London Daily Maximum Temperature, Minimum Temperature</h3>
-            <div className={styles.weatherGrid}>
-                {dates.map((date, i) => (
-                    <div key={date} className={styles.weatherCard}>
-                        {date} – <strong >Max Temp:</strong> {maxTemps[i]} °C –{" "}
-                        <strong>Min Temp:</strong> {minTemps[i]} °C {" "}
-                    </div>
-                ))}
-            </div>
+            <div className={styles.weatherGrid} >
+            {dates.map((date, i) => (
+                <div key={date} className={styles.weatherCard}>
+                    <ul>
+                        <strong> <ul id={styles.date} >{date}</ul></strong>
+                        <ul ><strong>Max Temp: </strong> {maxTemps[i]} °C </ul>
+                        <ul> <strong>Min Temp:</strong> {minTemps[i]} °C</ul>
+                    </ul>
+
+                </div>
+            ))}
         </div>
+        </div >
     );
 }
 

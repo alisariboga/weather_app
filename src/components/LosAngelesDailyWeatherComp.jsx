@@ -49,8 +49,12 @@ export default function LosAngelesDailyWeatherComp(losAngelesWeatherData) {
             <div className={styles.weatherGrid}>
                 {dates.map((date, i) => (
                     <div key={date} className={styles.weatherCard}>
-                        {date} – <strong>Max Temp:</strong> {maxTemps[i]} °C –{" "}
-                        <strong>Min Temp:</strong> {minTemps[i]} °C {" "}
+                        <ul>
+                            <strong> <ul id={styles.date} >{date} </ul></strong>
+                            <ul> <strong>Max Temp:</strong> {maxTemps[i]} °C </ul>
+                            <ul> <strong>Min Temp:</strong> {minTemps[i]} °C </ul>
+                        </ul>
+
                     </div>
                 ))}
             </div>

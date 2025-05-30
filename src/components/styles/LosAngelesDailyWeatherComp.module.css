@@ -5,7 +5,7 @@
 }
 
 .weatherCard {
-    background-color: white;
+    background-color: #F5F5F5;
     border-radius: 0.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -21,4 +21,7 @@
 
 .weatherCard> * + * {
     margin-top: 0.5rem;
+}
+#date{
+    color: #276127;
 }
