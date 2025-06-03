@@ -16,11 +16,6 @@ export default function LondonCurrentWeatherComp({ londonCurrentWeather }) {
     });
 
     return (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <h3 style={{ margin: 0 }}>London</h3>
-            <p>
-                {temp}°C
-            </p>
-        </div>
+        <>{temp}°C</>
     );
 }

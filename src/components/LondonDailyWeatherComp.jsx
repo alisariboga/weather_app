@@ -11,12 +11,12 @@ export default function LondonDailyWeatherComp(weatherData) {
         temperature_2m_min: minTemps,
     } = weatherData.weather;
 
-    const formatClock = isoString => //chatgpt
-        new Date(isoString).toLocaleTimeString("en-GB", {
-            hour: "2-digit",
-            minute: "2-digit",
-            hour12: false,
-        });
+    // const formatClock = isoString => //chatgpt
+    //     new Date(isoString).toLocaleTimeString("en-GB", {
+    //         hour: "2-digit",
+    //         minute: "2-digit",
+    //         hour12: false,
+    //     });
 
 
 

@@ -22,6 +22,7 @@
 .weatherCard> * + * {
     margin-top: 0.5rem;
 }
+
 #date{
     color: #276127;
 }

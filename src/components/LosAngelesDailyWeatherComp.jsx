@@ -13,12 +13,12 @@ export default function LosAngelesDailyWeatherComp(losAngelesWeatherData) {
         temperature_2m_min: minTemps,
     } = losAngelesWeatherData.losAngelesWeather;
 
-    const formatClock = isoString =>
-        new Date(isoString).toLocaleTimeString("en-GB", {
-            hour: "2-digit",
-            minute: "2-digit",
-            hour12: false,
-        });
+    // const formatClock = isoString =>
+    //     new Date(isoString).toLocaleTimeString("en-GB", {
+    //         hour: "2-digit",
+    //         minute: "2-digit",
+    //         hour12: false,
+    //     });
 
 
 
