@@ -2,6 +2,7 @@ import { useGetLosAngelesDailyWeather } from "../hooks/LosAngelesDailyWeather";
 import LosAngelesDailyWeatherComp from "../components/LosAngelesDailyWeatherComp";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import styles from './styles/LosAngeles16DaysWeather.module.css';
 
 
 function LosAngeles16DaysWeather() {
@@ -17,7 +18,7 @@ function LosAngeles16DaysWeather() {
 
     return (
         <div>
-            <button onClick={goToHome}>Go to Home Page</button>
+            <button className={styles["toggle-btn"]} onClick={goToHome}>Go to Home Page</button>
             {showLosAngeles && <LosAngelesDailyWeatherComp losAngelesWeather={losAngelesDailyWeather} />}
         </div>
     );

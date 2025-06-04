@@ -51,8 +51,8 @@ export default function LosAngelesDailyWeatherComp(losAngelesWeatherData) {
                     <div key={date} className={styles.weatherCard}>
                         <ul>
                             <strong> <ul id={styles.date} >{date} </ul></strong>
-                            <ul> <strong>Max Temp:</strong> {maxTemps[i]} °C </ul>
-                            <ul> <strong>Min Temp:</strong> {minTemps[i]} °C </ul>
+                            <li> <strong>Max Temp:</strong> {maxTemps[i]} °C </li>
+                            <li> <strong>Min Temp:</strong> {minTemps[i]} °C </li>
                         </ul>
 
                     </div>
