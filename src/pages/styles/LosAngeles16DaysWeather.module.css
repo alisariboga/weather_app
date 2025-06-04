@@ -8,7 +8,6 @@
 
 .toggle-btn:hover {
     background-color: var(--primary-dark-color);
-    ;
 }
 
 .toggle-btn:focus {
