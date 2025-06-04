@@ -7,7 +7,7 @@ export const useGetLosAngelesDailyWeather = () => {
         if (!losAngelesDailyWeather) {
             axios
                 .get(
-                    "https://api.open-meteo.com/v1/forecast?latitude=34.05&longitude=118.2426&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FBerlin&forecast_days=16"
+                    "https://api.open-meteo.com/v1/forecast?latitude=34.05&longitude=-118.2426&daily=temperature_2m_max,temperature_2m_min&timezone=Europe%2FBerlin&forecast_days=16"
                 )
                 .then(function (response) {
                     setLosAngelesWeather(response.data.daily)
