@@ -1,6 +1,6 @@
 import styles from "./styles/LosAngelesDailyWeatherComp.module.css";
 
-
+// buna da gerek yok CurrentWeatherComp de yaptigim gibi bunu da tek bir component yapabilirsin,  her bir sehir icin ayri bir component olusturmak react mantigina ters birsey
 export default function LosAngelesDailyWeatherComp(losAngelesWeatherData) {
     // Removed unused losAngelesWeather destructuring
 
@@ -22,24 +22,24 @@ export default function LosAngelesDailyWeatherComp(losAngelesWeatherData) {
 
 
 
+//burasi da ayni 
+    // const items = [];
+    // for (let i = 0; i < dates.length; i++) {
+    //     const date = dates[i];
+    //     const maxTemp = maxTemps[i];
+    //     const minTemp = minTemps[i];
 
-    const items = [];
-    for (let i = 0; i < dates.length; i++) {
-        const date = dates[i];
-        const maxTemp = maxTemps[i];
-        const minTemp = minTemps[i];
 
 
+    //     items.push(
+    //         <div key={i}>
+    //             <span>{date}</span>
+    //             <span>{maxTemp + " °C"}</span>
+    //             <span>{minTemp + " °C"}</span>
 
-        items.push(
-            <div key={i}>
-                <span>{date}</span>
-                <span>{maxTemp + " °C"}</span>
-                <span>{minTemp + " °C"}</span>
-
-            </div>
-        );
-    }
+    //         </div>
+    //     );
+    // }
 
 
     return (

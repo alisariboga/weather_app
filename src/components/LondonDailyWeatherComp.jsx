@@ -20,7 +20,7 @@ export default function LondonDailyWeatherComp(weatherData) {
 
 
 
-
+// Bu kisim ne yapiyor,   gereksiz duruyor
     const items = [];
     for (let i = 0; i < dates.length; i++) {
         const date = dates[i];
@@ -36,7 +36,7 @@ export default function LondonDailyWeatherComp(weatherData) {
             </div>
         );
     }
-
+//
 
     return (
         <div>

@@ -1,6 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+//burada ayri ayri hook olusturmaya gerek yok, hook un mantigi repettive koddan kacinmak, dolayisiyla generic bir hook yapip datayi cektigi url leri prop olarak gecebilirsin ve bu sayede datan farklilasir
+
+//Bunu da sana birakiyorum
+
 export const useGetLondonCurrentWeather = () => {
     const [londonCurrentWeather, setLondonCurrentWeather] = useState()
     useEffect(() => {
